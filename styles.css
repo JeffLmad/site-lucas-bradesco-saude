@@ -4,7 +4,7 @@
    Paleta inspirada na Bradesco Saúde, sem reproduzir logotipo/marca.
    ================================================================ */
 :root{
-  --red:        #C81E3A;
+  --red:        #CC092F;
   --red-dark:   #9A1530;
   --red-soft:   #FBE7EA;
   --navy:       #102542;
@@ -415,6 +415,7 @@ header{
   color:#9FB0C9;
   letter-spacing:.08em;
 }
+
 
 /* Cartão do formulário (flutuante, contraste com fundo navy) */
 .form-card{
