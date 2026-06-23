@@ -103,10 +103,21 @@ header{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:18px 28px;
+  padding:18px;
   max-width:var(--maxw);
   margin:0 auto;
   gap:16px;
+  border-bottom:1px solid #CC092F;
+}
+header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,var(--red),var(--navy)
+  );
 }
 .brand{
   display:flex;
@@ -136,6 +147,10 @@ header{
 }
 .header-cta svg{ width:16px;height:16px;flex-shrink:0; }
 .header-cta:hover{ background:var(--red); transform:translateY(-1px); }
+.brand-logo{
+  width:34px;height:34px;
+  flex-shrink:0;
+}
 
 /* ================================================================
    4. HERO
@@ -198,7 +213,7 @@ header{
   font-size:16px;
   padding:17px 30px;
   border-radius:999px;
-  box-shadow:0 14px 30px -10px rgba(200,30,58,0.45);
+  box-shadow:0 14px 30px -10px rgb(0, 0, 0);
   transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
 }
 .btn-primary:hover{
@@ -227,7 +242,11 @@ header{
 .hero-art{
   position:relative;
 }
-.hero-art svg{ width:100%; height:auto; }
+.hero-illustration{
+  width:100%;
+  max-width:480px;
+  border-radius:var(--radius-lg);
+}
 
 /* ================================================================
    5. SEÇÃO BENEFÍCIOS
@@ -365,13 +384,18 @@ header{
 }
 
 /* Cartão de cotação ilustrativo — elemento de assinatura visual */
+
 .policy-card{
+  
   background:linear-gradient(135deg,var(--navy-soft),var(--navy));
   border:1px solid rgba(255,255,255,0.12);
   border-radius:var(--radius-lg);
-  padding:26px;
-  max-width:360px;
+  padding:30px;
+  max-width:600px;
+  max-height: 300px;
   position:relative;
+  overflow: hidden;
+  box-shadow: -10px 10px 7px rgba(0, 0, 0, 0.705);
 }
 .policy-card::after{
   content:"";
@@ -383,13 +407,24 @@ header{
   margin-right:14px;
 }
 .policy-top{
-  display:flex; justify-content:space-between; align-items:center;
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center;
   margin-bottom:24px;
 }
-.policy-top .eyebrow{ color:#FF9FAE; }
+.form-copy .eyebrow{ 
+  color:#CC092F;
+}
+
 .policy-chip{
   width:34px;height:34px;
   flex-shrink:0;
+}
+.brand-logo-policy-card{
+  width:190px;
+  height:60px;
+  top:10px;
+  right:30px;
 }
 .policy-line{
   font-family:var(--font-mono);
@@ -411,11 +446,52 @@ header{
 }
 .policy-badge{
   font-family:var(--font-mono);
-  font-size:10.5px;
+  font-size:11px;
   color:#9FB0C9;
   letter-spacing:.08em;
 }
 
+.policy-badge-top{
+  position: absolute;
+  max-width: 120px;
+  max-height: 40px;
+  top: 100px;
+  right: 30px;
+  border: 1px solid rgba(255,255,255,.25);
+  padding-left: 30px;
+  padding-top:2px;
+  padding-bottom: 2px;
+  border-radius: 20px;
+  color: #dce7ff;
+  font-size: 90%;
+  backdrop-filter: blur(10px);
+}
+.policy-badge-top-inside{
+  font-size:8px;
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.icon {
+  color: #ffffff;
+  flex-shrink: 0;
+  background-clip: #102542;
+  width: 30px;
+  height: 20px;
+  bottom:9px;
+  position: absolute;
+  left:5px;
+}
+.policy-watermark {
+  position: absolute;
+  right: -30px;
+  bottom: -40px;
+  width: 200px;
+  opacity: 0.08; 
+  filter: grayscale(100%) brightness(7); 
+  pointer-events: none; 
+  
+}
 
 /* Cartão do formulário (flutuante, contraste com fundo navy) */
 .form-card{
