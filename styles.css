@@ -50,7 +50,7 @@ input,select{font-family:inherit;}
   width:100%;
   max-width:var(--maxw);
   margin:0 auto;
-  padding:0 28px;
+  padding:0 18px;
 }
 
 .eyebrow{
@@ -137,8 +137,9 @@ header::after {
   display:inline-flex;
   align-items:center;
   gap:8px;
-  background:var(--navy-soft);
-  color:var(--white);
+  background:#ffffff;
+  color:#CC092F;
+  background-color:var(--white);
   padding:11px 22px;
   border-radius:999px;
   font-size:14px;
@@ -151,7 +152,8 @@ header::after {
   flex-shrink:0; 
 }
 .header-cta:hover{ 
-  background:var(--navy); 
+  background:#CC092F; 
+  color:#ffffff;
   transform:translateY(-1px); 
 }
 
@@ -636,13 +638,13 @@ header::after {
    8. RODAPÉ
    ================================================================ */
 footer{
-  background:var(--gray-50);
+  background:var(--navy);
   border-top:1px solid var(--gray-100);
-  padding:36px 0;
+  padding:2px 0;
 }
 .footer-inner{
   text-align:center;
-  font-size:12.5px;
+  font-size:10px;
   color:var(--gray-600);
 }
 .footer-inner p{ margin-bottom:6px; }
@@ -650,10 +652,6 @@ footer{
   max-width:640px;
   margin:0 auto 14px;
   line-height:1.6;
-}
-.footer-consultor{
-  font-weight:600;
-  color:var(--navy);
 }
 
 /* ================================================================
